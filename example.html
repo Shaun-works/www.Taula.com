@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Pink Tax</title>
+  <link rel="shortcut icon" href="circle.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <title>Professional Footer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+  <title>Attractive Footer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="exampl.js">
+  <style>
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .toggle-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .toggle-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toggle-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .toggle-btn.active {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+
+        .section {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .section.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .column {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .column:hover {
+            transform: translateY(-5px);
+        }
+
+        .column h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .men-column h2 {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+        }
+
+        .women-column h2 {
+            background: linear-gradient(45deg, #fa709a, #fee140);
+        }
+
+        .divider {
+            width: 3px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .divider::before {
+            content: "VS";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .product-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .product-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        }
+
+        .product-item:hover {
+            border-color: #667eea;
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+        }
+
+        .product-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-brand {
+            font-weight: 700;
+            color: #333;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ff6b6b;
+            margin-bottom: 5px;
+        }
+
+        .product-type {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .divider {
+                display: none;
+            }
+
+            .product-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .toggle-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .toggle-btn {
+                width: 200px;
+            }
+        }
+
+        /* Animation for section transitions */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section.active {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+     <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9fafb;
+  }
+
+  footer {
+    background: linear-gradient(135deg, #fcdffa 0%, #f179f9 100%);
+    color: #f3f4f6;
+    padding: 30px 20px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #e75480;
+  }
+
+  .footer-summary {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e75480;
+  }
+
+  /* Quick Links */
+  .quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+  }
+
+  .quick-links li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+
+  .quick-links a {
+    text-decoration: none;
+    color: #ea4174;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .quick-links a:hover {
+    color: #d83767;
+  }
+
+  .social-icons {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .social-icons a {
+    width: 45px;
+    height: 45px;
+    background-color: #1f2937;
+    color: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+    text-decoration: none;
+  }
+
+  .social-icons a:hover {
+    background: #e75480;
+    color: white;
+    transform: scale(1.08);
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #000000;
+    padding-top: 15px;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-bottom p {
+    color: #000;
+  }
+
+  .footer-bottom .designer {
+    color: #e75480;
+    font-weight: bold;
+  }
+
+  .footer-bottom .email {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.3s;
+  }
+
+  .footer-bottom .email:hover {
+    text-decoration: underline;
+  }
+
+  .footer-bg-decor,
+  .footer-bg-decor-2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #e75480 0%, transparent 70%);
+    opacity: 0.12;
+    z-index: 0;
+  }
+
+  .footer-bg-decor {
+    top: -50px;
+    left: -50px;
+  }
+
+  .footer-bg-decor-2 {
+    bottom: -50px;
+    right: -50px;
+    background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
+  }
+
+  @media (min-width: 600px) {
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Google Font: Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Tailwind config to add custom font -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          poppins: ['Poppins', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="bg-white shadow-md sticky top-0 z-10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Left: Logo + TAULA -->
+    <div class="flex items-center space-x-3">
+      <img src="logo-removebg-preview.png" alt="TAULA Logo" class="w-15 h-10">
+      <h1 class="text-4xl md:text-4xl font-extrabold text-pink-600">TAULA</h1>
+    </div>
+
+    <!-- Right: Animated Pink Saver Wallet Button -->
+    <a href="#calculator" 
+       class="relative inline-flex items-center px-5 py-2 font-semibold text-white rounded-full shadow-lg overflow-hidden transition-all duration-500 animate-pulse"
+       style="background: linear-gradient(270deg, #ec4899, #f472b6, #f9a8d4, #f472b6, #ec4899); background-size: 600% 600%;">
+      
+      <span class="relative z-10 flex items-center space-x-2">
+        <img src="Untitled design.png" alt="Calculator Icon" class="w-5 h-5">
+        <span>Pink Saver Wallet</span>
+      </span>
+      
+      <span class="absolute inset-0 rounded-full opacity-50 transition duration-700 hover:opacity-100"
+            style="background: linear-gradient(90deg, #2727db, #2727db, #2727db); filter: blur(10px); z-index: 0;"></span>
+    </a>
+
+  </div>
+</nav>
+
+
+<body class="bg-pink-00 text-gray-800">
+
+<header class="relative h-[300px] md:h-[400px]">
+  <!-- Background image -->
+  <img src="final.png" alt="Pink Tax Background" 
+       class="absolute inset-0 w-full h-full object-cover">
+
+<body class="bg-pink-00 text-gray-800">
+
+<header class="relative h-[300px] md:h-[400px]">
+  <!-- Background image -->
+  <img src="final.png" alt="Pink Tax Background" 
+       class="absolute inset-0 w-full h-full object-cover">
+
+  <!-- Optional tint -->
+  <div class="absolute inset-0 bg-pink-100/40"></div>
+
+  <!-- Text between middle and right (shifted more right) -->
+  <div class="relative h-full flex items-center justify-center ml-28 md:ml-48">
+    <div class="text-right max-w-lg">
+      <h2 class="text-4xl md:text-5xl font-bold text-pink-800 mb-4 whitespace-nowrap">
+        She Pays Extra: Here's Why
+      </h2>
+      <p class="text-lg md:text-xl text-pink-900">
+        The Pink Tax refers to the extra amount women are charged for certain products or services — even when they're nearly identical to men's versions.
+      </p>
+    </div>
+  </div>
+</header>
+<!-- Section with Full-Fit Background Image and Content Above -->
+<section class="relative w-full px-6 py-24 min-h-screen flex items-center justify-center">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0 -z-10 w-full h-full bg-no-repeat bg-contain bg-center"
+       style="background-image: url('pink-tax-2-copy final.webp');">
+  </div>
+
+  <!-- Grid Layout Inside Centered Container -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl w-full">
+
+<!-- Left Column (Wider & Shifted Slightly Right) -->
+<div class="w-full">
+  <div class="bg-pink-100 p-8 rounded-2xl shadow-xl transition duration-300 hover:shadow-2xl w-full max-w-xl -ml-20">
+    <img src="https://thebusinessrule.com/wp-content/uploads/2024/01/What-is-Pink-Tax-in-India_.webp"
+         alt="Pink tax concept"
+         class="rounded-xl mb-6 w-full aspect-[16/9] object-cover transition-transform duration-300 hover:scale-105">
+
+    <h2 class="text-2xl font-bold text-pink-600 mb-4">What is the Pink Tax?</h2>
+    <p class="text-gray-800 leading-relaxed text-base">
+      Pink Tax refers to the extra amount women are charged for certain products or services — even when they're nearly identical to men's versions. It's a hidden cost that affects financial independence and equity.
+    </p>
+  </div>
+</div>
+</section>
+ 
+<!-- HEADER -->
+<header class="text-center py-10 bg-pink-200 bg-cover bg-right" 
+        style="background-image: url('mj98CzhBNmpPuSthFZwyrg.jpg');">
+  <h2 class="text-3xl font-bold text-pink-700 bg-white bg-opacity-70 inline-block px-4 py-2 rounded-lg">
+    The Price Trap: You Never Saw Coming..
+  </h2>
+</header>
+
+  <div>
+    <img src="">
+    <div class="container">
+        <div class="toggle-buttons">
+            <button id="toggle-personal-care" class="toggle-btn active">Personal Care Products</button>
+            <button id="toggle-hair-skin" class="toggle-btn">Hair & Skin Care</button>
+            <button id="toggle-accessories" class="toggle-btn">Accessories</button>
+            <button id="toggle-daily-essentials" class="toggle-btn">Daily Essentials</button>
+        </div>
+
+        <!-- Personal Care Section -->
+        <div id="personal-care-section" class="section active">
+            <div class="comparison-container">
+                <div class="column men-column">
+                    <h2>Men's Products</h2>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <img src="https://images.ctfassets.net/7tfi3razjgvb/7D1sunB00g2Mpqq2zdkj0m/37efa7fb88777f19d6c1807906ef8273/sp_overview_402x.png" class="product-img" alt="Men's Razor">
+                            <div class="product-info">
+                                <div class="product-brand">Gillette</div>
+                                <div class="product-price">₹99.00</div>
+                                <div class="product-type">Razor</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://m.media-amazon.com/images/I/71FmeVBY1GL._UF1000,1000_QL80_.jpg" class="product-img" alt="Men's Soap">
+                            <div class="product-info">
+                                <div class="product-brand">Dove Men</div>
+                                <div class="product-price">₹149.00</div>
+                                <div class="product-type">Soap</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://m.media-amazon.com/images/I/51QTmyFj5wL.jpg" class="product-img" alt="Men's Deodorant">
+                            <div class="product-info">
+                                <div class="product-brand">Nivea Men</div>
+                                <div class="product-price">₹149.20</div>
+                                <div class="product-type">Deodorant</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="column women-column">
+                    <h2>Women's Products</h2>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <img src="https://cdn11.bigcommerce.com/s-8mji1/images/stencil/1280x1280/products/3753/27067/pink_razor__00955.1717409004.jpg?c=2" class="product-img" alt="Women's Razor">
+                            <div class="product-info">
+                                <div class="product-brand">Hair Removal</div>
+                                <div class="product-price">₹120.00</div>
+                                <div class="product-type">Razor</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://m.media-amazon.com/images/I/515TeZiUkHL._UF1000,1000_QL80_.jpg" class="product-img" alt="Women's Soap">
+                            <div class="product-info">
+                                <div class="product-brand">Dove Pink</div>
+                                <div class="product-price">₹246.00</div>
+                                <div class="product-type">Soap</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://img.nivea.com/-/media/miscellaneous/media-center-items/7/5/c/016b0aa435ec4c86ab73bdae524f48de-web_1010x1180_transparent_png.png" class="product-img" alt="Women's Deodorant">
+                            <div class="product-info">
+                                <div class="product-brand">Nivea Women</div>
+                                <div class="product-price">₹269.00</div>
+                                <div class="product-type">Deodorant</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hair & Skin Care Section -->
+        <div id="hair-skin-section" class="section">
+            <div class="comparison-container">
+                <div class="column men-column">
+                    <h2>Men's Hair & Skin Care</h2>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <img src="https://rukminim2.flixcart.com/image/704/844/joen7gw0/hair-oil/q/4/d/200-after-shower-hair-oil-parachute-advansed-men-original-imafavgn9sp8zghs.jpeg?q=90" class="product-img" alt="Men's Hair Oil">
+                            <div class="product-info">
+                                <div class="product-brand">Parachute</div>
+                                <div class="product-price">₹199.00</div>
+                                <div class="product-type">Hair Oil</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://beautifulstore.in/wp-content/uploads/2024/02/900.jpg" class="product-img" alt="Men's Sunscreen">
+                            <div class="product-info">
+                                <div class="product-brand">Men Sunscreen</div>
+                                <div class="product-price">₹295.00</div>
+                                <div class="product-type">Sunscreen</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://pixies.in/media/catalog/product/cache/e9780188a08ae15edb442fcb34502371/0/7/074-nivea-men-active-care-lip-balm-spf-15-pixies-chennai.jpg" class="product-img" alt="Men's Lip Balm">
+                            <div class="product-info">
+                                <div class="product-brand">Nivea Men</div>
+                                <div class="product-price">₹225.00</div>
+                                <div class="product-type">Lip Balm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="column women-column">
+                    <h2>Women's Hair & Skin Care</h2>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <img src="https://m.media-amazon.com/images/I/31BaI2QmDcL._SX300_SY300_QL70_FMwebp_.jpg" class="product-img" alt="Women's Hair Oil">
+                            <div class="product-info">
+                                <div class="product-brand">Parachute Pink</div>
+                                <div class="product-price">₹350.03</div>
+                                <div class="product-type">Hair Oil</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://img.nivea.com/-/media/miscellaneous/media-center-items/2/b/b/639ac5cf869741dcb2890c728b58901b-web_1010x1180_transparent_png.png" class="product-img" alt="Women's Sunscreen">
+                            <div class="product-info">
+                                <div class="product-brand">Women Sunscreen</div>
+                                <div class="product-price">₹349.00</div>
+                                <div class="product-type">Sunscreen</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://img.nivea.com/-/media/miscellaneous/media-center-items/4/7/7/7ff9a3eda53143be973fa750b9480899-web_1010x1180_transparent_png.png" class="product-img" alt="Women's Lip Balm">
+                            <div class="product-info">
+                                <div class="product-brand">Nivea Women</div>
+                                <div class="product-price">₹265.00</div>
+                                <div class="product-type">Lip Balm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accessories Section -->
+        <div id="accessories-section" class="section">
+            <div class="comparison-container">
+                <div class="column men-column">
+                    <h2>Men's Accessories</h2>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <img src="https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw7b940fed/images/Fastrack/Catalog/3287KL01_1.jpg?sw=600&sh=600" class="product-img" alt="Men's Watch">
+                            <div class="product-info">
+                                <div class="product-brand">Fastrack</div>
+                                <div class="product-price">₹2,599.03</div>
+                                <div class="product-type">Watch</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://optorium.in/cdn/shop/files/rayban_2283_901_58_sunglass_01_a9af72d4-b74a-4082-81a2-1d55b26f50ab.jpg?v=1754383756&width=2048" class="product-img" alt="Men's Sunglasses">
+                            <div class="product-info">
+                                <div class="product-brand">Rayban Men</div>
+                                <div class="product-price">₹5,999.03</div>
+                                <div class="product-type">Sunglasses</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://m.media-amazon.com/images/I/51zsmRAlWkL._UF1000,1000_QL80_.jpg" class="product-img" alt="Men's Perfume">
+                            <div class="product-info">
+                                <div class="product-brand">Fogg Men</div>
+                                <div class="product-price">₹299.03</div>
+                                <div class="product-type">Perfume</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="column women-column">
+                    <h2>Women's Accessories</h2>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <img src="https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw0037746c/images/Fastrack/Catalog/6296QM01_1.jpg?sw=600&sh=600" class="product-img" alt="Women's Watch">
+                            <div class="product-info">
+                                <div class="product-brand">Fastrack</div>
+                                <div class="product-price">₹3,059.03</div>
+                                <div class="product-type">Watch</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://india.ray-ban.com/media/wysiwyg/Rb_sunglasses_clp_opti/805289439899_render1-min.png" class="product-img" alt="Women's Sunglasses">
+                            <div class="product-info">
+                                <div class="product-brand">Rayban Women</div>
+                                <div class="product-price">₹8,290.03</div>
+                                <div class="product-type">Sunglasses</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/fogg/945329/0/VbkI2DU0SN-nxyr2BENK-1.png" class="product-img" alt="Women's Perfume">
+                            <div class="product-info">
+                                <div class="product-brand">Fogg Women</div>
+                                <div class="product-price">₹358.03</div>
+                                <div class="product-type">Perfume</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daily Essentials Section -->
+        <div id="daily-essentials-section" class="section">
+            <div class="comparison-container">
+                <div class="column men-column">
+                    <h2>Men's Daily Essentials</h2>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <img src="https://www.herocycles.com/dw/image/v2/BGQH_PRD/on/demandware.static/-/Sites-cycles-master/default/dw00724f10/Products/Slingshot/BCSLS26BKGN001/Medium%20(1).png?sh=160" class="product-img" alt="Men's Cycle">
+                            <div class="product-info">
+                                <div class="product-brand">Hero Cycles</div>
+                                <div class="product-price">₹8,999.00</div>
+                                <div class="product-type">Cycle</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://www.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3/yP-mplace/Bags/Back_Packs/YPB0BTD4FK9G_1.jpg&resizeTo=600" class="product-img" alt="Men's Backpack">
+                            <div class="product-info">
+                                <div class="product-brand">Wildcraft</div>
+                                <div class="product-price">₹1,499.00</div>
+                                <div class="product-type">Backpack</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://m.media-amazon.com/images/I/61FYlYtnZCL._UF1000,1000_QL80_.jpg" class="product-img" alt="Men's Helmet">
+                            <div class="product-info">
+                                <div class="product-brand">Vega Men</div>
+                                <div class="product-price">₹1,199.00</div>
+                                <div class="product-type">Helmet</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="column women-column">
+                    <h2>Women's Daily Essentials</h2>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <img src="https://www.herocycles.com/dw/image/v2/BGQH_PRD/on/demandware.static/-/Sites-cycles-master/default/dw51072135/Products/Janhvi/Pink/01.png?sh=523" class="product-img" alt="Women's Cycle">
+                            <div class="product-info">
+                                <div class="product-brand">Hero Cycles</div>
+                                <div class="product-price">₹9,999.00</div>
+                                <div class="product-type">Cycle</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://wildcraft.com/media/catalog/product/1/_/1_2527.jpg?width=960" class="product-img" alt="Women's Backpack">
+                            <div class="product-info">
+                                <div class="product-brand">Wildcraft Women</div>
+                                <div class="product-price">₹1,559.00</div>
+                                <div class="product-type">Backpack</div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://m.media-amazon.com/images/I/5110+adKfBL.jpg" class="product-img" alt="Women's Helmet">
+                            <div class="product-info">
+                                <div class="product-brand">Vega Women</div>
+                                <div class="product-price">₹1,399.00</div>
+                                <div class="product-type">Helmet</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setupToggle(buttonId, sectionId) {
+            const btn = document.getElementById(buttonId);
+            const section = document.getElementById(sectionId);
+
+            btn.addEventListener("click", (e) => {
+                // Remove active states
+                document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+                document.querySelectorAll(".toggle-btn").forEach(b => b.classList.remove("active"));
+
+                // Activate clicked
+                section.classList.add("active");
+                btn.classList.add("active");
+            });
+        }
+
+        setupToggle("toggle-personal-care", "personal-care-section");
+        setupToggle("toggle-hair-skin", "hair-skin-section");
+        setupToggle("toggle-accessories", "accessories-section");
+        setupToggle("toggle-daily-essentials", "daily-essentials-section");
+    </script>
+</body>
+<br>
+<!-- HEADER -->
+<header class="text-center py-10 bg-pink-200 bg-cover bg-right" 
+        style="background-image: url('istockphoto-1326405627-612x612.jpg');">
+  <h2 class="text-3xl font-bold text-pink-700 bg-white bg-opacity-70 inline-block px-4 py-2 rounded-lg">
+   The Hidden Cost of Being a Woman
+  </h2>
+</header>
+<br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Tax Calculator - Professional Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-pink: #e11d48;
+            --secondary-pink: #f472b6;
+            --light-pink: #fce7f3;
+            --accent-purple: #8b5cf6;
+            --dark-gray: #1f2937;
+            --medium-gray: #6b7280;
+            --light-gray: #f9fafb;
+            --border-color: #e5e7eb;
+            --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --gradient-primary: linear-gradient(135deg, #e11d48 0%, #f472b6 100%);
+            --gradient-subtle: linear-gradient(135deg, #fce7f3 0%, #f3e8ff 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: var(--dark-gray);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* Calculator Card Styles */
+        .calculator-card {
+            background: rgb(255, 255, 255);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-large);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calculator-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .calculator-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+        }
+
+        .form-select, .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-select:focus, .form-input:focus {
+            outline: none;
+            border-color: var(--primary-pink);
+            box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.1);
+        }
+
+        /* Product Items */
+        .products-section {
+            background: var(--gradient-subtle);
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+        }
+
+        .product-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .product-item:last-child {
+            border-bottom: none;
+        }
+
+        .product-checkbox {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary-pink);
+            cursor: pointer;
+        }
+
+        .product-name {
+            flex: 1;
+            font-weight: 500;
+            color: var(--dark-gray);
+        }
+
+        .product-input {
+            width: 100px;
+            padding: 0.5rem 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .product-percentage {
+            color: var(--primary-pink);
+            font-weight: 600;
+            font-size: 0.9rem;
+            min-width: 60px;
+        }
+
+        /* Age Input Section */
+        .age-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--light-gray);
+            padding: 1rem;
+            border-radius: 12px;
+        }
+
+        .age-input {
+            width: 80px;
+            padding: 0.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .age-helper {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Calculate Button */
+        .calculate-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-large);
+        }
+
+        .calculate-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Results Section */
+        .results-section {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--light-gray);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary-pink);
+        }
+
+        .result-main {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .result-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-pink);
+            margin: 0.5rem 0;
+        }
+
+        .result-text {
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+        }
+
+        .breakdown-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+        }
+
+        .breakdown-table th,
+        .breakdown-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .breakdown-table th {
+            background: var(--gradient-primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        .breakdown-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Comparison Chart */
+        .comparison-section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .chart-container {
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            gap: 3rem;
+            height: 120px;
+            margin: 1rem 0;
+        }
+
+        .chart-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bar {
+            width: 60px;
+            border-radius: 8px 8px 0 0;
+            transition: all 0.3s ease;
+            margin-bottom: 0.5rem;
+        }
+
+        .bar-female {
+            background: var(--gradient-primary);
+        }
+
+        .bar-male {
+            background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+        }
+
+        .chart-label {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .chart-amount {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+        }
+
+        /* Lifetime Toggle */
+        .lifetime-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lifetime-toggle:hover {
+            background: var(--light-pink);
+        }
+
+        .lifetime-result {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--gradient-subtle);
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+
+        .lifetime-amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-pink);
+        }
+
+        /* Tips Section */
+        .tips-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--gradient-subtle);
+            border-radius: 16px;
+            border-left: 4px solid var(--accent-purple);
+        }
+
+        .tip-text {
+            font-style: italic;
+            color: var(--medium-gray);
+            margin-top: 0.5rem;
+        }
+
+        /* Action Card Styles */
+        .action-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-large);
+            text-align: center;
+            position: sticky;
+            top: 2rem;
+        }
+
+        .action-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-pink);
+            margin-bottom: 1rem;
+        }
+
+        .action-description {
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Copy Button */
+        .copy-section {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .copy-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--light-pink);
+            color: var(--primary-pink);
+            border: 2px solid var(--primary-pink);
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary-pink);
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .calculator-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .calculator-title {
+                font-size: 2rem;
+            }
+
+            .product-item {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .product-input {
+                width: 80px;
+            }
+
+            .chart-container {
+                gap: 2rem;
+            }
+
+            .result-amount {
+                font-size: 2rem;
+            }
+
+            .action-card {
+                position: static;
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem 0.5rem;
+            }
+
+            .calculator-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .calculator-title {
+                font-size: 1.75rem;
+            }
+
+            .product-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+                padding: 1rem 0;
+            }
+
+            .product-controls {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                width: 100%;
+            }
+
+            .result-amount {
+                font-size: 1.75rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .results-section {
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        /* Utilities */
+        .hidden { display: none; }
+        .text-center { text-align: center; }
+        .font-bold { font-weight: 700; }
+        .currency { color: var(--primary-pink); font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-grid">
+            <!-- Calculator Section -->
+            <div class="calculator-card">
+                <h1 class="calculator-title">Pink Tax Calculator</h1>
+                
+                <form id="calculator-form">
+                    <div class="form-group">
+                        <label class="form-label" for="gender">Gender</label>
+                        <select id="gender" class="form-select">
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                        </select>
+                    </div>
+
+                    <div class="products-section">
+                        <h3 style="margin-bottom: 1rem; color: var(--dark-gray); font-weight: 600;">Monthly Spending</h3>
+                        <div id="products-container">
+                            <!-- Products will be injected here -->
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="age-section">
+                            <label class="form-label" style="margin-bottom: 0;">Age:</label>
+                            <input type="number" id="age" class="age-input" min="13" max="99" value="25">
+                            <span class="age-helper">(for lifetime calculation)</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="calculate-btn">
+                        Calculate Pink Tax Impact
+                    </button>
+                </form>
+
+                <div id="results" class="hidden"></div>
+                <div id="copy-section" class="copy-section hidden">
+                    <button id="copy-btn" class="copy-btn">📋 Copy Results</button>
+                </div>
+            </div>
+
+            <!-- Action Section -->
+            <div class="action-card">
+                <h2 class="action-title">Take Action</h2>
+                <p class="action-description">
+                    Join thousands fighting gender-based pricing discrimination. Your voice can drive real change in the marketplace and challenge unfair pricing practices.
+                </p>
+                <a href="https://forms.gle/G9H9h7r7mYEPHCHVA" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="cta-button">
+                    Make Your Voice Heard
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const PRODUCTS = [
+            { name: "Shampoo ", percentage: 15, defaultAmount: 200,},
+            { name: "Razors ", percentage: 20, defaultAmount: 150,},
+            { name: "Deodorant & Perfume", percentage: 12, defaultAmount: 120, },
+            { name: "Clothing & Accessories", percentage: 10, defaultAmount: 800,  },
+            { name: "Haircuts", percentage: 30, defaultAmount: 400,  }
+        ];
+
+        const TIPS = [
+            "Choose gender-neutral brands that price products equally for everyone.",
+            "Compare ingredient lists - they're often identical despite price differences.",
+            "Buy in bulk from wholesale stores to reduce per-unit gendered markup.",
+            "Use price comparison apps to identify and avoid pink tax products.",
+            "Support brands that commit to fair pricing regardless of gender.",
+            "Consider men's versions of products - they often contain similar ingredients.",
+            "Shop at stores with transparent, uniform pricing policies.",
+            "Read product reviews to find quality alternatives without gender premium.",
+            "Avoid impulse purchases influenced by gendered marketing tactics.",
+            "Choose refillable products to reduce long-term gendered costs."
+        ];
+
+        class PinkTaxCalculator {
+            constructor() {
+                this.initializeProducts();
+                this.bindEvents();
+            }
+
+            initializeProducts() {
+                const container = document.getElementById('products-container');
+                
+                PRODUCTS.forEach((product, index) => {
+                    const productHTML = `
+                        <div class="product-item">
+                            <input type="checkbox" 
+                                   id="product-${index}" 
+                                   class="product-checkbox" 
+                                   checked>
+                            <label for="product-${index}" class="product-name">
+                                ${product.icon} ${product.name}
+                            </label>
+                            <div class="product-controls">
+                                <span style="color: var(--medium-gray);">₹</span>
+                                <input type="number" 
+                                       id="amount-${index}" 
+                                       class="product-input" 
+                                       min="0" 
+                                       step="10" 
+                                       value="${product.defaultAmount}"
+                                       placeholder="Amount">
+                                <span class="product-percentage">+${product.percentage}%</span>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += productHTML;
+                });
+            }
+
+            bindEvents() {
+                document.getElementById('calculator-form').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.calculateResults();
+                });
+
+                document.getElementById('copy-btn').addEventListener('click', () => {
+                    this.copyResults();
+                });
+            }
+
+            formatCurrency(amount) {
+                return new Intl.NumberFormat('en-IN', {
+                    style: 'currency',
+                    currency: 'INR',
+                    maximumFractionDigits: 0
+                }).format(amount);
+            }
+
+            calculateResults() {
+                const gender = document.getElementById('gender').value;
+                const age = parseInt(document.getElementById('age').value) || 25;
+                
+                let totalPinkTax = 0;
+                let totalFemaleSpending = 0;
+                let totalMaleSpending = 0;
+                let breakdown = [];
+
+                PRODUCTS.forEach((product, index) => {
+                    const isChecked = document.getElementById(`product-${index}`).checked;
+                    const amount = parseFloat(document.getElementById(`amount-${index}`).value) || 0;
+                    
+                    if (isChecked && amount > 0) {
+                        const pinkTaxAmount = gender === 'female' ? (amount * product.percentage / 100) : 0;
+                        totalPinkTax += pinkTaxAmount;
+                        totalFemaleSpending += amount + pinkTaxAmount;
+                        totalMaleSpending += amount;
+                        
+                        if (pinkTaxAmount > 0) {
+                            breakdown.push({
+                                name: product.name,
+                                amount: pinkTaxAmount,
+                                icon: product.icon
+                            });
+                        }
+                    }
+                });
+
+                this.displayResults({
+                    gender,
+                    age,
+                    totalPinkTax,
+                    totalFemaleSpending,
+                    totalMaleSpending,
+                    breakdown
+                });
+            }
+
+            displayResults(data) {
+                const resultsContainer = document.getElementById('results');
+                const copySection = document.getElementById('copy-section');
+                
+                let resultsHTML = '<div class="results-section">';
+
+                // Main result
+                resultsHTML += '<div class="result-main">';
+                if (data.gender === 'female' && data.totalPinkTax > 0) {
+                    resultsHTML += `
+                        <div class="result-text">Monthly Pink Tax Impact</div>
+                        <div class="result-amount">${this.formatCurrency(data.totalPinkTax)}</div>
+                        <div class="result-text">You're paying extra each month due to gender-based pricing</div>
+                    `;
+                } else {
+                    resultsHTML += `
+                        <div class="result-text">No Pink Tax Detected</div>
+                        <div class="result-amount">${this.formatCurrency(0)}</div>
+                        <div class="result-text">Your selected gender doesn't face additional pricing</div>
+                    `;
+                }
+                resultsHTML += '</div>';
+
+                // Breakdown table
+                if (data.breakdown.length > 0) {
+                    resultsHTML += `
+                        <table class="breakdown-table">
+                            <thead>
+                                <tr>
+                                    <th>Product Category</th>
+                                    <th>Monthly Pink Tax</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    `;
+                    
+                    data.breakdown.forEach(item => {
+                        resultsHTML += `
+                            <tr>
+                                <td>${item.icon} ${item.name}</td>
+                                <td>${this.formatCurrency(item.amount)}</td>
+                            </tr>
+                        `;
+                    });
+                    
+                    resultsHTML += '</tbody></table>';
+                }
+
+                // Comparison chart
+                resultsHTML += this.generateComparisonChart(data.totalFemaleSpending, data.totalMaleSpending);
+
+                // Lifetime toggle
+                resultsHTML += `
+                    <label class="lifetime-toggle">
+                        <input type="checkbox" id="lifetime-toggle" style="accent-color: var(--primary-pink);">
+                        <span>Show Lifetime Impact (Age 13 to ${data.age})</span>
+                    </label>
+                    <div id="lifetime-result" class="hidden"></div>
+                `;
+
+                // Tips section
+                if (data.gender === 'female' && data.totalPinkTax > 0) {
+                    const randomTip = TIPS[Math.floor(Math.random() * TIPS.length)];
+                    resultsHTML += `
+                        <div class="tips-section">
+                            <h4 style="color: var(--accent-purple); margin-bottom: 0.5rem;">💡 Money-Saving Tip</h4>
+                            <div>Switch to gender-neutral alternatives and save approximately <span class="currency">${this.formatCurrency(data.totalPinkTax)}</span> monthly!</div>
+                            <div class="tip-text">${randomTip}</div>
+                        </div>
+                    `;
+                }
+
+                resultsHTML += '</div>';
+                
+                resultsContainer.innerHTML = resultsHTML;
+                resultsContainer.classList.remove('hidden');
+                copySection.classList.remove('hidden');
+
+                // Bind lifetime toggle
+                this.bindLifetimeToggle(data);
+            }
+
+            generateComparisonChart(femaleSpending, maleSpending) {
+                const maxSpending = Math.max(femaleSpending, maleSpending);
+                const femaleHeight = maxSpending > 0 ? (femaleSpending / maxSpending) * 80 : 10;
+                const maleHeight = maxSpending > 0 ? (maleSpending / maxSpending) * 80 : 10;
+
+                return `
+                    <div class="comparison-section">
+                        <h4 class="text-center" style="margin-bottom: 1rem; color: var(--dark-gray);">Monthly Spending Comparison</h4>
+                        <div class="chart-container">
+                            <div class="chart-bar">
+                                <div class="bar bar-female" style="height: ${femaleHeight}px;"></div>
+                                <div class="chart-label" style="color: var(--primary-pink);">Female</div>
+                                <div class="chart-amount">${this.formatCurrency(femaleSpending)}</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar bar-male" style="height: ${maleHeight}px;"></div>
+                                <div class="chart-label" style="color: var(--medium-gray);">Male</div>
+                                <div class="chart-amount">${this.formatCurrency(maleSpending)}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            bindLifetimeToggle(data) {
+                const toggle = document.getElementById('lifetime-toggle');
+                const result = document.getElementById('lifetime-result');
+
+                if (toggle) {
+                    toggle.addEventListener('change', () => {
+                        if (toggle.checked && data.totalPinkTax > 0) {
+                            const yearsOfImpact = Math.max(0, data.age - 13);
+                            const lifetimeImpact = data.totalPinkTax * 12 * yearsOfImpact;
+                            
+                            result.innerHTML = `
+                                <div class="lifetime-result">
+                                    <div style="color: var(--medium-gray); margin-bottom: 0.5rem;">Estimated Lifetime Pink Tax</div>
+                                    <div class="lifetime-amount">${this.formatCurrency(lifetimeImpact)}</div>
+                                    <div style="color: var(--medium-gray); font-size: 0.9rem;">From age 13 to ${data.age} (${yearsOfImpact} years)</div>
+                                </div>
+                            `;
+                            result.classList.remove('hidden');
+                        } else {
+                            result.classList.add('hidden');
+                        }
+                    });
+                }
+            }
+
+            copyResults() {
+                const resultsText = document.getElementById('results').innerText;
+                const copyBtn = document.getElementById('copy-btn');
+                
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(resultsText).then(() => {
+                        copyBtn.textContent = '✅ Copied!';
+                        setTimeout(() => {
+                            copyBtn.textContent = '📋 Copy Results';
+                        }, 2000);
+                    }).catch(() => {
+                        copyBtn.textContent = '❌ Copy failed';
+                        setTimeout(() => {
+                            copyBtn.textContent = '📋 Copy Results';
+                        }, 2000);
+                    });
+                }
+            }
+        }
+
+        // Initialize calculator when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new PinkTaxCalculator();
+        });
+    </script>
+<!-- Three columns at the end of the page -->
+<div class="three-cols-container" style="max-width:1100px;margin:40px auto;">
+  <div class="three-cols-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;">
+    <!-- Left Column -->
+    <div class="col bg-white rounded-xl shadow p-6 text-center">
+      <img src="https://static.vecteezy.com/system/resources/previews/007/683/528/non_2x/calendar-calendar-icon-calendar-icon-simple-sign-calendar-symbol-free-vector.jpg" alt="calendar-calendar-icon-calendar-icon-simple-sign-calendar-symbol-free-vector" alt="Pink Tax" class="rounded-xl mb-4" height="50" width="50" style="display:block;margin:0 auto;">
+      <p> <p>A 2015 study by the New York City Department of Consumer Affairs found that products marketed to women cost an average of 7% more than similar products marketed to men. This pricing disparity was observed in categories like toys, clothing, personal care items, and adult products.</p>
+    </div>
+    <!-- Middle Column -->
+    <div class="col bg-white rounded-xl shadow p-6 text-center">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmhqqfo7gIxgC5yYzHxggDARDAhCMNeF9lMw&s" alt="calendar-calendar-icon-calendar-icon-simple-sign-calendar-symbol-free-vector" height="50" width="50" class="rounded-xl mb-4" style="display:block;margin:0 auto;">
+      <p>Over a lifetime, women may pay thousands of rupees more for essential goods and services simply due to gendered pricing. From razors and deodorants to haircuts and dry cleaning, this accumulated cost contributes to the economic inequality faced by women.</p>
+    </div>
+    <!-- Right Column -->
+    <div class="col bg-white rounded-xl shadow p-6 text-center">
+      <img src="https://img.favpng.com/21/9/12/percent-sign-percentage-symbol-computer-icons-plus-minus-sign-png-favpng-7kDjUc4cdRUEDvsysFkHtKEMs.jpg" alt="percent-sign-percentage-symbol-computer-icons-plus-minus-sign-png-favpng-7kDjUc4cdRUEDvsysFkHtKEMs" height="50" width="50" class="rounded-xl mb-4" style="display:block;margin:0 auto;">
+      <br>
+      <p>Despite the name, the Pink Tax is not an official tax, but a systemic market pricing issue. It reflects how companies brand and price products differently for women, even when the items are functionally identical to those for men..</p>
+    </div>
+  </div>
+</div>
+<style>
+.three-cols-container {
+    margin-bottom: 40px;
+}
+.three-cols-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+}
+.three-col {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(204, 105, 135, 0.08);
+    padding: 24px;
+    text-align: center;
+}
+@media (max-width: 900px) {
+    .three-cols-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+</style>
+<footer style="background-color: #f9f6fa; padding: 40px 20px; font-family: Arial, sans-serif; position: relative;">
+
+  <!-- Footer Content -->
+  <div class="footer-container" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start; max-width: 1200px; margin: auto;">
+
+    <!-- Quick Links -->
+    <div style="min-width: 180px;">
+      <h2 style="color: #b03060; margin-bottom: 12px; font-size: 18px;"><b>Quick Links</b></h2>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+        <li><a href="#home" style="color: #333; text-decoration: none;">Home</a></li>
+        <li><a href="#about" style="color: #333; text-decoration: none;">About Us</a></li>
+        <li><a href="#services" style="color: #333; text-decoration: none;">Services</a></li>
+        <li><a href="#contact" style="color: #333; text-decoration: none;">Contact</a></li>
+        <li><a href="#faq" style="color: #333; text-decoration: none;">FAQ</a></li>
+      </ul>
+    </div>
+
+<!-- Contact Information -->
+<div>
+  <h2 style="color: #b03060; margin-bottom: 12px;"><b>Contact Us</b></h2>
+
+  <!-- Email Link -->
+  <a href="mailto:taula25@gmail.com" 
+     style="color: #172f57; text-decoration: none; display: inline-flex; align-items: center; margin-top: 5px; font-weight: bold;"
+     class="email-link">
+    <i class="fas fa-envelope" style="margin-right: 6px; font-size: 18px;"></i>
+    Click here to email us
+  </a>
+
+  <!-- Instagram Button (Smaller) -->
+  <div style="margin-top: 8px;">
+    <a href="https://www.instagram.com/project.taula?igsh=MWR3amFkejNnMGVqZQ=="
+       target="_blank"
+       class="instagram-link"
+       style="
+         display: inline-flex;
+         align-items: center;
+         gap: 6px;
+         padding: 5px 10px;
+         background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+         border-radius: 6px;
+         text-decoration: none;
+         font-weight: bold;
+         font-size: 14px;
+         color: white;
+         font-family: Arial, sans-serif;
+         transition: transform 0.2s ease, box-shadow 0.2s ease;">
+      <i class="fab fa-instagram" style="font-size: 16px;"></i>
+      Follow us on Instagram
+    </a>
+  </div>
+</div>
+
+    <!-- About / Summary -->
+    <div style="max-width: 400px; text-align: center;">
+      <h2 style="color: #b03060; font-size: 18px;"><b>Stay Connected</b></h2>
+      <p style="margin: 10px 0; line-height: 1.6; color: #333;">
+        Project: TAULA is a student-led initiative committed to spreading awareness, promoting equality, 
+        and inspiring meaningful change across communities.
+      </p>
+    </div>
+  </div>
+
+<!-- Footer Bottom -->
+<div style="margin-top: 30px; text-align: center; font-size: 14px; color: #555; font-family: Arial, sans-serif;">
+  
+  <!-- Footer Links -->
+  <ul style="list-style: none; padding: 0; margin: 0; display: inline-flex; gap: 20px;">
+    <li>
+      <a href="#privacy-policy" style="color: #333; text-decoration: none; transition: color 0.3s ease;">
+        Privacy Policy
+      </a>
+    </li>
+    <li>
+      <a href="#terms-of-service" style="color: #333; text-decoration: none; transition: color 0.3s ease;">
+        Terms of Service
+      </a>
+    </li>
+  </ul>
+
+  <!-- Divider -->
+  <div style="width: 100%; max-width: 1900px; height: 1px; background-color: #000000; margin: 12px auto;"></div>
+
+  <!-- Copyright -->
+  <p style="margin-top: 10px; font-size: 13px; color: #000000;">
+    &copy; 2025 Project TAULA. Designed by 
+    <span style="color: #b03060; font-weight: bold;">Shaun</span>
+  </p>
+</div>
+
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+    .email-link {
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .email-link:hover {
+      color: #b03060;
+      transform: translateX(4px);
+    }
+    .email-link:hover i {
+      animation: bounce 0.6s infinite;
+      color: #b03060;
+    }
+    .instagram-link {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .instagram-link:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .instagram-link:hover i {
+      animation: bounce 0.6s infinite;
+    }
+  </style>
+</footer>
+</body>
+</html>
